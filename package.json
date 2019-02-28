@@ -1,0 +1,25 @@
+{
+  "name": "waffle-app",
+  "productName": "Waffle",
+  "version": "1.0.0",
+  "description": "Waffle packaged as Electron app",
+  "repository": "https://github.com/sammarks/waffle-app",
+  "main": "main.js",
+  "author": "Samuel Marks <sam@sammarks.me>, Felix Gnass <fgnass@gmail.com>",
+  "license": "Unlicense",
+  "devDependencies": {
+    "electron": "^1.7.11",
+    "electron-packager": "^10.1.1",
+    "eslint": "^4.16.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "prettier": "^1.10.2"
+  },
+  "scripts": {
+    "pack-icons": "iconutil -c icns icon.iconset",
+    "pack-osx": "electron-packager ./ 'Waffle' --overwrite --platform=darwin --arch=x64 --icon=icon.icns",
+    "start": "electron main.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {}
+}
